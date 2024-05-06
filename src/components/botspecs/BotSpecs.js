@@ -36,18 +36,13 @@ function BotSpecs({ botSpecsShown, armyBots, setArmyBots }) {
 
       <div className="btnSpec">
         <button>
-          <NavLink className="navSpec btnSpec" to="/
-phase2-code-challenge-bot-battlr
-">
-            Go Back
-          </NavLink>
+          <NavLink className="navSpec btnSpec" to="/phase2-code-challenge-bot-battlr">Go Back </NavLink>
         </button>
         <br></br>
         <br />
         <button>
-          <NavLink to="/
-phase2-code-challenge-bot-battlr
-" className="navSpec btnSpec" onClick={() => {
+          <NavLink to="/phase2-code-challenge-bot-battlr" 
+          className="navSpec btnSpec" onClick={() => {
             const alreadyInBot = armyBots.includes(botSpecsShown);
 
             if (alreadyInBot) {
