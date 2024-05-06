@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/phase2-code-challenge-bot-battlr/static/css/main.b8b959ad.css",
+    "main.js": "/phase2-code-challenge-bot-battlr/static/js/main.0c5f8905.js",
+    "static/js/453.52e1f0e5.chunk.js": "/phase2-code-challenge-bot-battlr/static/js/453.52e1f0e5.chunk.js",
+    "index.html": "/phase2-code-challenge-bot-battlr/index.html",
+    "main.b8b959ad.css.map": "/phase2-code-challenge-bot-battlr/static/css/main.b8b959ad.css.map",
+    "main.0c5f8905.js.map": "/phase2-code-challenge-bot-battlr/static/js/main.0c5f8905.js.map",
+    "453.52e1f0e5.chunk.js.map": "/phase2-code-challenge-bot-battlr/static/js/453.52e1f0e5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b8b959ad.css",
+    "static/js/main.0c5f8905.js"
+  ]
+}
