@@ -1,23 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import Botcolletion from "./components/botcolletction/botcollection";
+import Yourbotarmy from "./components/yourbotarmy/yourbotarmy";
+import BotSpecs from "./components/botspecs/BotSpecs";
 
 function App() {
+  const [botcolletion, setBotcolletion] = useState([]);
+  const [armyBots, setArmyBots] = useState([]);
+  const [botSpecsShown, setBotspecsShown] = useState({});
+
+  useEffect(() => {
+    fetch("https://json-server-8-3nkp.onrender.com/bots")
+      .then((resp) => resp.json())
+      .then((data) => {
+        setBotcolletion(data);
+      });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header>Bot Battlr</header>
+      <Yourbotarmy armyBots={armyBots} setArmyBots={setArmyBots} />
+      <Routes>
+        <Route
+        
+          path="/phase2-code-challenge-bot-battlr"
+          element={
+            <Botcolletion
+              setBotspecsShown={setBotspecsShown}
+              setArmyBots={setArmyBots}
+              armyBots={armyBots}
+              botcolletion={botcolletion}
+              setBotcolletion={setBotcolletion}
+            />
+          }
+        />
+        <Route
+    
+          path="/phase2-code-challenge-bot-battlr/botspecs"
+          element={
+            <BotSpecs
+              botSpecsShown={botSpecsShown}
+              setArmyBots={setArmyBots}
+              armyBots={armyBots}
+            />
+          }
+        />
+      </Routes>
     </div>
   );
 }
