@@ -2,14 +2,14 @@ import React from "react";
 import "../../App.css";
 import { NavLink } from "react-router-dom";
 
-function Botcolletion({
+function Botcollection({
   setArmyBots,
   armyBots,
-  botcolletion,
-  setBotcolletion,
+  botcollection,
+  setBotcollection,
   setBotspecsShown,
-}) {
-  const shownBot = botcolletion.map((bot, index) => {
+} ){
+  const shownBot = botcollection.map((bot, index) => {
     return (
       <li className="botLi" key={"bot" + index}>
         <NavLink
@@ -47,7 +47,7 @@ function Botcolletion({
           className="deleteBtn"
           onClick={() => {
             setArmyBots(armyBots.filter((armBott) => armBott.id !== bot.id));
-            setBotcolletion(botcolletion.filter((bott) => bott.id !== bot.id));
+            setBotcollection(botcollection.filter((bott) => bott.id !== bot.id));
           }}
         >
           X
@@ -64,4 +64,4 @@ function Botcolletion({
   );
 }
 
-export default Botcolletion;
+export default Botcollection;
